@@ -4,7 +4,7 @@ import ctypes
 from ctypes.wintypes import *
 
 VirtualProtect = ctypes.windll.kernel32.VirtualProtect
-
+PDWORD = ctypes.POINTER(DWORD)
 VirtualProtect.argtypes = [LPVOID, ctypes.c_size_t, DWORD, PDWORD]
 VirtualProtect.restype = BOOL
 
